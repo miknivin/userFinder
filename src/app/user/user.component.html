@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center my-5">
+  <label for="userIdInput">Enter User ID: </label>
+  <input  id="floatingInput"  type="number" id="userIdInput" [(ngModel)]="userId">
+  <button class="ms-3 btn btn-primary" (click)="fetchUserData()">Fetch User</button>
+</div>
+
+<!-- <div *ngIf="user">
+  <h2>{{ user.name }}</h2>
+  <p>Email: {{ user.email }}</p>
+  <p>City: {{ user.address.city }}</p>
+</div> -->
+
+<div  class="container d-flex justify-content-center align-items-center">
+  <div  *ngIf="user" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ user.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ user.email }}</h6>
+      <p class="card-text">{{ user.address.city }}</p>
+      <!-- <a href="#" class="card-link">{{user.w}}</a>
+      <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+</div>
